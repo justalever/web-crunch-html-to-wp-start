@@ -1,0 +1,27 @@
+// Reviews Block
+.reviews-block {
+  background: url(../img/reviews-bg.jpg) 0 50% no-repeat;
+  background-size: cover;
+}
+
+// Reviews Block Animations
+.reviews-block.active {
+  @include animation;
+  animation-delay: 0.2s;
+  @extend .fade-in;
+  .feature-box {
+    @include animation;
+    animation-delay: 0.4s;
+    @extend .fade-in;
+    h2 {
+      @include animation;
+      animation-delay: 0.6s;
+      @extend .fade-in-down;
+    }
+    blockquote {
+      @include animation;
+      animation-delay: 0.6s;
+      @extend .fade-in-up;
+    }
+  }
+}

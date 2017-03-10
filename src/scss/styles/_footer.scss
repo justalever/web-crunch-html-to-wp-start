@@ -1,0 +1,65 @@
+// Footer
+.footer {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  color: $mid-grey;
+  background: $darkest-grey;
+  strong {
+    color: $white;
+  }
+  @include breakpoint(l) {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+}
+.footer-heading {
+  font-family: $base-heading-font-family;
+  @extend .fs-4;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: $white;
+  &:after {
+    @extend .divider;
+    @extend .divider-fourth;
+    margin-top: 20px;
+    content: "";
+  }
+}
+.footer-column {
+  position: relative;
+  p { margin: 0; }
+  padding-top: 20px;
+  @include breakpoint(l) { padding-top: 0; }
+  &:after {
+    content: "";
+    width: 100%;
+    height: 1px;
+    @include background-alpha($white, 20%);
+    position: absolute;
+    top: 20px;
+    left: 0;
+    @include breakpoint(l) { display: none; }
+  }
+  &:first-child {
+    padding-top: 0;
+    &:after { content: none; }
+  }
+}
+.icon-list-inline {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-top: 10px;
+  li {
+    margin-left: 10px;
+    display: inline-block;
+    &:first-child { margin-left: 0; }
+  }
+}
+.footer-social-list {
+  .social-twitter:hover { background-image: url(../img/twitter-gold.svg); }
+  .social-facebook:hover { background-image: url(../img/facebook-gold.svg); }
+  .social-google-plus:hover { background-image: url(../img/google-plus-gold.svg); }
+  .social-youtube:hover { background-image: url(../img/youtube-gold.svg); }
+}

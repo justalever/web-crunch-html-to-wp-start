@@ -1,0 +1,35 @@
+// About Block
+.about-block {
+  background: url(../img/contemporary-china.png) 0 0 repeat;
+  .about-block-content {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .about-chef { margin-top: 20px; }
+}
+
+// About Block Animations
+.about-block.active {
+  .about-block-content {
+    h2 {
+      @include animation;
+      animation-delay: 0.2s;
+      @extend .fade-in-down;
+    }
+    p {
+      @include animation;
+      animation-delay: 0.4s;
+      @extend .fade-in-down;
+    }
+    img {
+      @include animation;
+      animation-delay: 0.6s;
+      @extend .fade-in;
+    }
+  }
+  .about-block-img {
+    @include animation;
+    animation-delay: 0.8s;
+    @extend .fade-in-right;
+  }
+}

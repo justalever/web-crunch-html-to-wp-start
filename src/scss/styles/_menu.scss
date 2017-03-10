@@ -1,0 +1,74 @@
+// Food Menu Block
+.food-menu-block { background: url(../img/cream-pixels.png) 0 0 repeat; }
+.food-menu-content {
+  @include breakpoint(m) {
+    float: left;
+    width: 50%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}
+.food-menu-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 60px 0;
+  .food-menu-item {
+    position: relative;
+    padding: 10px;
+    margin-bottom: 30px;
+  }
+  .food-menu-item-special {
+    border: 1px solid $special-gold;
+    margin-top: 20px;
+    padding-top: 30px;
+    &:after {
+      @include font-size(13);
+      line-height: 30px;
+      content: "Special";
+      display: block;
+      position: absolute;
+      height: 30px;
+      top: -30px;
+      right: -1px;
+      font-weight: 700;
+      padding: 0 5px;
+      @include background-alpha($soft-gold, 80%);
+      color: $white;
+    }
+  }
+}
+.food-menu-heading {
+  font-family: $base-heading-font-family;
+  @extend .fs-3;
+  color: $soft-gold;
+  width: 50%;
+  float: left;
+  padding: 0;
+  text-align: left;
+}
+.food-menu-item-header {
+  border-bottom: 1px solid $special-gold;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+.food-menu-price {
+  font-family: $base-heading-font-family;
+  @extend .fs-3;
+  float: left;
+  color: $soft-gold;
+  width: 50%;
+  padding: 0;
+  text-align: right;
+}
+
+// Food Menu Block Animations
+.food-menu-block.active {
+  .food-menu-content {
+    &:first-child {
+      @include animation;
+      @extend .fade-in-left;
+    }
+    @include animation;
+    @extend .fade-in-right;
+  }
+}

@@ -1,0 +1,141 @@
+// Dividers
+.divider {
+  width: 270px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.divider-primary {
+  background: url(../img/divider-xl-white.svg) 50% 50% no-repeat;
+  height: 55px;
+}
+.divider-secondary {
+  background: url(../img/divider-gold.svg) 50% 50% no-repeat;
+  height: 40px;
+}
+.divider-third {
+  background: url(../img/divider-white.svg) 50% 50% no-repeat;
+  height: 35px;
+}
+.divider-fourth {
+  background: url(../img/divider-sm-white.svg) 50% 50% no-repeat;
+  height: 30px;
+}
+
+// Headings
+.heading {
+  margin: 0;
+  text-align: center;
+  &:after {
+    content: "";
+    @extend .divider;
+    @extend .divider-secondary;
+    margin-bottom: 20px;
+  }
+}
+.heading-secondary {
+  color: $white;
+  &:after {
+    content: "";
+    @extend .divider;
+    @extend .divider-third;
+    margin-bottom: 20px;
+  }
+}
+
+// Buttons
+.button {
+  color: $white;
+  padding: 1em 3em;
+  text-decoration: none;
+  border: 1px solid transparent;
+  background: $gold;
+  transition: all 0.3s;
+  font-weight: 700;
+  display: inline-block;
+  text-transform: uppercase;
+  position: relative;
+  &:hover {
+    background: $soft-gold;
+    color: $white;
+  }
+  &:active { top: 1px; }
+}
+.button-primary {
+  border: 1px solid $black;
+  @include background-alpha($black, 50%);
+  &:hover { @include background-alpha($black, 100%); }
+}
+.button-secondary {
+  border: 1px solid $white;
+  @include background-alpha($white, 15%);
+  &:hover { @include background-alpha($white, 0%); }
+}
+
+// Feature Box
+.feature-box {
+  padding: 20px 10px;
+  color: $white;
+  @include background-alpha($black, 80%);
+  @include breakpoint(m) {
+    padding: 50px 60px;
+  }
+}
+
+// Social Icons
+.social {
+  width: 16px;
+  height: 25px;
+  top: 7px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+  transition: all .2s;
+}
+.social-facebook {
+  background-image: url(../img/facebook-white.svg);
+  &:hover {
+    background-image: url(../img/facebook-gold.svg);
+  }
+}
+.social-twitter {
+  background-image: url(../img/twitter-white.svg);
+  &:hover {
+    background-image: url(../img/twitter-gold.svg);
+  }
+}
+.social-youtube {
+  background-image: url(../img/youtube-white.svg);
+  &:hover {
+    background-image: url(../img/youtube-gold.svg);
+  }
+}
+.social-google-plus {
+  background-image: url(../img/google-plus-white.svg);
+  &:hover {
+    background-image: url(../img/google-plus-gold.svg);
+  }
+}
+
+// Payment Icons
+.payment {
+  width: 40px;
+  height: 25px;
+  top: 7px;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  display: block;
+  position: relative;
+}
+.payment-mastercard { background-image: url(../img/mastercard-white.svg); }
+.payment-visa { background-image: url(../img/visa-white.svg); }
+.payment-american-express { background-image: url(../img/american-express-white.svg); }
+.payment-paypal { background-image: url(../img/paypal-white.svg); }
+
+// General Content
+.content-block {
+  background: $soft-grey;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
