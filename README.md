@@ -1,4 +1,4 @@
-# Starter HTML
+# HTML to WordPress Starter HTML
 The free HTML theme available to download and follow along as we convert it to a WordPress theme.
 
 Follow along at either [web-crunch.com](https://web-crunch.com) or my [YouTube channel](https://youtube.com/c/webcrunch).
